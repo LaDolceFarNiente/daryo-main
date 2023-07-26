@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
+:root {
+  --main: #008ccc;
+  --shadow: 0 0 6px 0 rgba(0, 0, 0, 0.07);
+  --border: 1px solid #e4e4e4;
+  --merri: "Merriweather", serif;
+  --ibm: "IBM Plex Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--merri);
+}
+img {
+  width: 100%;
+}
+i.fi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  margin: auto;
+  padding: 0px 10px;
+  max-width: 1305px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.header {
+  margin: 10px 0;
+  padding: 15px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: -1px;
+  z-index: 99;
+}
+.logo {
+  margin: 0 30px 0 0;
+  width: 180px;
+}
+.logo img {
+  display: block;
+}
+ul.menu {
+  display: flex;
+}
+ul.menu li a {
+  padding: 0 20px 0 10px;
+  font-weight: 600;
+  font-size: 12px;
+  border-left: 3px solid var(--main);
+}
+ul.menu li a:hover {
+  color: var(--main);
+}
+.buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.buttons .search {
+  margin-top: 3px;
+  cursor: pointer;
+}
+.tooltip {
+  position: relative;
+}
+.fgr {
+  visibility: visible;
+}
+.buttons ul.language {
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  left: -50px;
+  box-shadow: 0 0 2px;
+  background: #fff;
+  top: 33px;
+  visibility: hidden;
+}
+.buttons ul.language::after{
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(211, 211, 211) transparent;
+    overflow: hidden;
+}
+.buttons ul.language li {
+  padding: 10px 10px 10px;
+  background: #fff;
+  order: 5;
+}
+.active {
+  order: 1 !important;
+}
+.buttons ul.language li:hover{
+  background: rgba(144, 144, 144, 0.745);
+}
+/* Header Bottom */
+.header_bottom .row {
+  margin: 0 0 10px;
+}
+.today {
+  padding: 10px 15px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  color: #8e8e8e;
+  justify-content: space-between;
+  font-family: var(--ibm);
+  box-shadow: var(--shadow);
+  border: var(--border);
+}
+.today .date {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.today .date span {
+  font-weight: 200;
+  font-size: 12px;
+}
+.today .weather {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.today .weather i.fi {
+  margin-top: 8px;
+  font-size: 36px;
+}
+.today .weather .weather_data {
+  display: flex;
+  flex-direction: column;
+}
+.today .weather_data span {
+  display: flex;
+  align-items: center;
+  color: #2c2c2c;
+}
+.today .weather_data span i.fi {
+  margin-top: 7px;
+  font-size: 14px !important;
+}
+/* Currency */
+.currency {
+  padding: 0px 15px;
+  width: 73.6%;
+  display: flex;
+  align-items: center;
+  font-family: var(--ibm);
+  color: #8e8e8e;
+  box-shadow: var(--shadow);
+  border: var(--border);
+}
+ul.currency_items {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 13px;
+}
+ul.currency_items li {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+ul.currency_items li i {
+  margin-top: 4px;
+  color: #96e442;
+}
+ul.app {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ul.app li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+ul.app li i {
+  font-size: 16px;
+}
+ul.app li:hover {
+  color: var(--main);
+}
+/* Main Content */
+.sidebar {
+  width: 320px;
+  height: 85vh;
+  box-shadow: var(--shadow);
+  border: var(--border);
+  font-family: var(--merri);
+  background: #f1f1f1;
+  position: sticky;
+  top: 95px;
+}
+.sidebar .title {
+  padding: 20px 15px 20px 20px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar .title span {
+  padding: 0 12px;
+  border-left: 3px solid #2c2c2c;
+  font-weight: 600;
+}
+.sidebar .title:hover {
+  background: var(--main);
+  cursor: pointer;
+  color: #fff;
+}
+.sidebar .title:hover span {
+  border-color: #fff;
+}
+.sidebar .title i {
+  font-size: 22px;
+}
+ul.sidebar_news {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+ul.sidebar_news::-webkit-scrollbar {
+  width: 12px;
+  background: #dbdbdb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+ul.sidebar_news::-webkit-scrollbar-thumb {
+  background: var(--main);
+  cursor: pointer;
+  border-radius: 5px;
+}
+ul.sidebar_news li a {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  font-family: var(--merri);
+  font-weight: 600;
+  font-size: 14px;
+  color: #3e3e3e;
+}
+ul.sidebar_news li a:hover {
+  background: #f8f8f8;
+  box-shadow: var(--shadow);
+  color: #000;
+}
+ul.sidebar_news li a span {
+  margin: 0 0 10px;
+  padding: 0 10px;
+  font-family: var(--ibm);
+  font-weight: 500;
+  font-size: 13px;
+  border-left: 3px solid var(--main);
+  color: #8e8e8e;
+}
+.main {
+  width: 73%;
+}
+
+
+/* modal */
+
+.modalInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+}
+.modalInput .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+.modalInput input {
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  width: 500px;
+  height: 50px;
+  background: inherit;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.modalInput button {
+  border: 1px solid transparent;
+  background: #fff;
+  padding: 10px 25px;
+  transition: 0.5s;
+}
+.modalInput button:hover {
+  background: #000;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.opacity {
+  opacity: 0;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100vh;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+.overlay i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  z-index: 99999;
+}
+.hidden {
+  display: none;
+}
